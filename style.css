@@ -165,7 +165,6 @@ background-color: rgb(224, 197, 148);
   background-color: #1c188a;
 }
 
-
 /*************************************Back to school*******************************************************************************************/ 
 
 .deals-container {
@@ -229,9 +228,10 @@ background-color: rgb(224, 197, 148);
  .school:hover{
   background-color: #2e27e7;
  }
- .office:hover{
+ .:hover{
   background-color: #2e27e7;
  }
+
  /*-------------------------------------certificate carousal--------------------------------------------------------------------------------------------------*/
  body {
   background-color:#eee;
@@ -261,7 +261,7 @@ background-color: rgb(224, 197, 148);
 /****************/
 section.client {
 	padding:4em 0em;
-	background-color: #eee;
+	
 
 }
 section.client .section-title {
@@ -295,5 +295,14 @@ section.client .section-title {
 .slide1:hover{
   box-shadow:10px 0px 5px 6px #000000;
 }
+.blog:hover{
+  border-color: grey;
 
+}
+
+/* ------------------------------------------------------------------footer----------------------------------------------------------------------------------------------- */
+.footer h1{
+  text-align: center;
+  
+}
 
