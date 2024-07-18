@@ -94,7 +94,7 @@ background-color: rgb(224, 197, 148);
   
 }
 .col-lg-6{
-  width: 58%;
+  /* width: 58%; */
 }
 
 /*-------------------------------------owl section--------------------------------------------------------------*/
@@ -223,13 +223,13 @@ background-color: rgb(224, 197, 148);
     margin-bottom: 13px;
  }
  .university:hover{
-  background-color: #2e27e7;
+  background-color: #1e1aac;
  }
  .school:hover{
-  background-color: #2e27e7;
+  background-color: #1e1aac;
  }
  .:hover{
-  background-color: #2e27e7;
+  background-color: #1e1aac;
  }
 
  /*-------------------------------------certificate carousal--------------------------------------------------------------------------------------------------*/
@@ -301,8 +301,65 @@ section.client .section-title {
 }
 
 /* ------------------------------------------------------------------footer----------------------------------------------------------------------------------------------- */
-.footer h1{
+ .client h1{
   text-align: center;
   
+} 
+
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+.footer .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffc107;
+}
+.footer .subscribe {
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer .social-icons img {
+  width: 32px;
+  margin-right: 10px;
+}
+.footer .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.footer .list-unstyled li {
+  margin-bottom: 10px;
 }
 
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--bs-nav-pills-link-active-color);
+  background-color: white;
+}
+
+
+
+/* badge icon */
+.zero {
+  /* background-color: red; */
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  
+}
+.absolute{
+  position: absolute;
+  top: -6px;
+  right: 0;
+
+  width: 17px;
+  height: 17px;
+  background: #003aaa;
+  border-radius: 50%;
+}
+
+.nav-link{
+  font-weight: 700;
+  color: #000;
+}
