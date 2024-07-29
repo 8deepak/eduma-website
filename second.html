@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Deal</title>
+    <link rel="icon" type="image/png" href="Logo.svg">
+    <!-- css cdn -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .header-top {
+            background-color: #e8eef9;
+            padding: 5px 0;
+        }
+
+        .header-top .hotline {
+            font-weight: bold;
+            padding-left: 8rem;
+            /* padding-top: 1rem; */
+
+        }
+
+        .header-top .promo {
+            text-align: right;
+        }
+
+        .header-bottom {
+            border-bottom: 1px solid #ccc;
+            /* Optional border */
+            box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+            padding: 10px 0;
+        }
+
+        .navbarNav {
+            font-weight: 700;
+            color: black;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 0 10px;
+
+        }
+
+        .navbar-nav .dropdown-menu {
+            min-width: auto;
+
+        }
+
+        .header-icons .icon {
+            font-size: 1.2rem;
+            margin-left: 15px;
+        }
+
+        .right {
+            gap: 7px;
+            justify-content: center;
+        }
+
+        /*icons  */
+        .bi-search,
+        .bi-cart {
+            color: #000000;
+            padding: 3px;
+            filter: brightness(40%);
+        }
+
+        .bi-heart {
+            color: #000000;
+            padding: 5px;
+        }
+
+        .bi-heart .badge {
+            position: absolute;
+            top: 22px;
+            right: 155px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(6, 4, 4);
+            border-radius: 55%;
+            padding: 4px 6px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .multi-column-dropdown a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .form-check-labellast {
+            /* position: absolute; */
+
+        }
+
+        .dropdown-menu {
+            width: 14rem;
+        }
+
+        /******cards style ******/
+        .footer {
+            background-color: #f0f7ff;
+            padding: 20px 0;
+        }
+
+        .footer .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        .footer a {
+            color: #343a40;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+        }
+
+        #navbarDropdownMenuLink {
+            color: #000000;
+            font-weight: 700;
+        }
+
+        /* general information */
+        /*  */
+        #price {
+            /* padding-left: 15px; */
+        }
+
+        #color {
+            padding-left: 0px;
+        }
+
+        #rating {
+            margin-left: 0px;
+        }
+
+        #availability {
+            margin-left: 0px;
+        }
+
+        #catego {
+            padding-left: 0px;
+        }
+
+        /* price slider */
+        .range-slider {
+            height: 5px;
+            position: relative;
+            background-color: #d2cece;
+            border-radius: 2px;
+        }
+
+        .range-selected {
+            height: 100%;
+            left: 30%;
+            right: 30%;
+            position: absolute;
+            border-radius: 5px;
+            background-color: #040506;
+        }
+
+        /* the styling for the range input elements: */
+        .range-input {
+            position: relative;
+        }
+
+        .range-input input {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            top: -7px;
+            background: none;
+            pointer-events: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .range-input input::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 3px solid #f9fafc;
+            background-color: #140e0e;
+            pointer-events: auto;
+            -webkit-appearance: none;
+        }
+
+        .range-input input::-moz-range-thumb {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            border: 3px solid #1b53c0;
+            background-color: #fff;
+            pointer-events: auto;
+            -moz-appearance: none;
+        }
+
+        /* styles for the min and max input fields: */
+        .range-price {
+            margin: 3px 0px 20px -4px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .range-price label {
+            margin-right: 5px;
+        }
+
+        .range-price input {
+            width: 50px;
+            padding: 3px;
+        }
+
+        .range-price input:first-of-type {
+            margin-right: 15px;
+        }
+
+        /* cechkbox colors */
+        #flexCheckYellow {
+            background-color: yellow;
+        }
+
+        #flexCheckred {
+            background-color: rgb(255, 0, 0);
+        }
+
+        #flexCheckPink {
+            background-color: rgb(254, 0, 229);
+        }
+
+        #flexCheckBlack {
+            background-color: rgb(0, 0, 0);
+        }
+
+        #flexCheckGrey {
+            background-color: rgb(122, 122, 119);
+        }
+
+        #flexCheckBlue {
+            background-color: rgb(0, 51, 255);
+        }
+
+        #flexCheckGreen {
+            background-color: rgb(0, 255, 60);
+        }
+
+        /* start */
+        #star {
+            color: rgb(220, 179, 31);
+            font-size: x-large;
+        }
+
+        #last {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Top -->
+    <section>
+        <div class="header-top container-fluid">
+            <div class="row  py-2" style="width: 100%;">
+                <div class="col-md-4 hotline">
+                    Hotline: +16468801999
+                </div>
+                <div class="col-md-4 mx-auto ">
+                    <b style="color: #0800ff; font-weight: 800;">25%</b> OFF Multi-Use Print & Copy Paper with code
+                    <strong style="color: #0800ff; font-weight: 800;">EDUMA2024</strong>
+                </div>
+                <div class="col-md-2">
+                    <div class=" right d-flex ">
+                        <div class="dropdown">
+                            <select style="background: transparent;">
+                                <option value="eng">Eng</option>
+                                <option value="cn">CN</option>
+                            </select>
+                        </div>
+                        <div class="dropdown">
+                            <select style="background: transparent;">
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                            </select>
+                        </div>
+                        <div id="Login">
+                            <a href="#" style="text-decoration: none; color: #000000;">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Logo.svg" alt="EDUMA ECOMMERCE" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="gap: 2rem">
+                    <li class=" dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu multi-column columns-3" style="width: max-content;">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <a href="#">
+                                            <p style="color: #1c188a; font-weight: 700;">School Solution</p>
+                                            <a href="#">
+                                                <p>Accessories</p>
+                                            </a>
+                                            <a href="#">
+                                                <p>Cookware</p>
+                                            </a>
+                                            <a href="#">
+                                                <p>Culinary</p>
+                                            </a>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="multi-column-dropdown">
+                                        <a href="#">
+                                            <p style="color: #1c188a; font-weight: 700;">University Soluiton</p>
+                                        </a>
+                                        <a href="#">
+                                            <p>Files & Folders</p>
+                                        </a>
+                                        <a href="#">
+                                            <p>Desk Accessories</p>
+                                        </a>
+                                        <a href="#">
+                                            <p>Office Desk</p>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12">
+                                    <ul class="multi-column-dropdown">
+                                        <a href="#">
+                                            <p style="color: #1c188a; font-weight: 700;">School Solution</p>
+                                        </a>
+                                        <a href="#">
+                                            <p>Paper & NoteBooks</p>
+                                        </a>
+                                        <a href="#">
+                                            <p>Pens & Writing</p>
+                                        </a>
+                                        <a href="#">
+                                            <p>Printer</p>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Filter Left Side Bar</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navbarDropdownMenuLink" href="second.html">Best Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navbarDropdownMenuLink" href="third.html">Paper & Notebooks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="navbarDropdownMenuLink" href="fourth.html">Office Desk</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="#">Filter Left Side Bar</a></li>
+                            <li><a class="dropdown-item" href="#">Simple Product Layout</a></li>
+                            <li><a class="dropdown-item" href="#">Variable Product Layout</a></li>
+                            <li><a class="dropdown-item" href="#">Card</a></li>
+                            <li><a class="dropdown-item" href="#">Block Grid</a></li>
+                            <li><a class="dropdown-item" href="#">Blog List</a></li>
+                            <li><a class="dropdown-item" href="#">Courses</a></li>
+                            <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                            <li><a class="dropdown-item" href="#">Compare</a></li>
+                            <li><a class="dropdown-item" href="#">About Us </a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">Policy</a></li>
+                            <li><a class="dropdown-item" href="#">Term Of Services</a></li>
+                            <li><a class="dropdown-item" href="#">Shipping</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Desk Accessories -->
+    <div class="container my-5">
+        <div class="Desk">
+            <h1>Desk Accessories</h1>
+            <p>HomeDesk / Accessories</p>
+        </div>
+    </div>
+    <!-- cards section -->
+    <section class="navbar navbar-expand-md  ">
+        <div class="container" id="Catego" ;>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <ul class="navbar-nav mx-auto mb-2 ">
+                        <div class="col-lg-6 col-md-6 col-sm-12" class=" dropdown ">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu multi-column columns-3" style="width: max-content;">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Cookware
+                                                </label>
+                                            </div>
+                                        </ul>
+                                        <ul class="multi-column-drpdown">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Culinary
+                                                </label>
+                                            </div>
+                                        </ul>
+                                        <ul class="multi-column-dropdown" style="width:max-content;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Desk Accessories
+                                                </label>
+                                            </div>
+                                        </ul>
+                                        <ul class="multi-column-dropdown" style="width: max-content;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Desk Accessories
+                                                </label>
+                                            </div>
+
+                                        </ul>
+                                        <ul class="multi-column-dropdown" style="width: max-content;">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Files & Folders
+                                                </label>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </ul>
+                            </li>
+                        </div>
+
+                        <!-- second dropdown -->
+                        <div class="col-lg-6 col-md-6 col-sm-12" id="price">
+
+                            <li class=" dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Price
+
+                                </a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <!-- <div class="row"> -->
+                                    <!-- <div class="col-sm-4">
+                                            <div class="d-flex"> -->
+                                    <div class="range-price">
+                                        <label for="min">Min</label>
+                                        <input type="number" name="min" value="300">
+                                        <label for="max">Max</label>
+                                        <input type="number" name="max" value="700">
+                                    </div>
+                                    <div class="range">
+                                        <div class="range-slider">
+                                            <span class="range-selected"></span>
+                                        </div>
+                                        <div class="range-input">
+                                            <input type="range" class="min" min="0" max="1000" value="300" step="10">
+                                            <input type="range" class="max" min="0" max="1000" value="700" step="10">
+                                        </div>
+                                    </div>
+
+                                    <!-- end price  -->
+                                    <!-- </div>
+                                        </div> -->
+                                </ul>
+                            </li>
+                        </div>
+                        <!-- third -->
+                        <div class="col-lg-6 col-md-6 col-sm-12" id="color">
+
+                            <li class=" dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Color
+
+                                </a>
+                                <ul class="dropdown-menu multi-column columns-3" style="width: max-content;">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckBlack">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Black
+                                                    </label>
+                                                </div>
+                                            </ul>
+                                            <ul class="multi-column-drpdown">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckBlue">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Blue
+                                                    </label>
+                                                </div>
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width:max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckGrey">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Grey
+                                                    </label>
+                                                </div>
+
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width: max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckGreen">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Green
+                                                    </label>
+                                                </div>
+
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width: max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckPink">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Pink
+                                                    </label>
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width: max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckred">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Red
+                                                    </label>
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width: max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckYellow">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Yellow
+                                                    </label>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <!-- 4th dropdown -->
+                        <div class="col-lg-6 col-md-6 col-sm-12" id="rating">
+
+                            <li class=" dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Rating
+
+                                </a>
+                                <ul class="dropdown-menu multi-column columns-3" style="width: max-content;">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label for="star5" id="star">★★★★★<span
+                                                            style="color: grey;">(2)</span></label>
+
+                                                </div>
+                                            </ul>
+                                            <ul class="multi-column-drpdown">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label for="star5" id="star">★★★★<span
+                                                            style="color: grey;">(1)</span></label>
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width:max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label for="star5" id="star">★★★<span
+                                                            style="color: grey;">(0)</span></label>
+
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width: max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label for="star5" id="star">★★<span
+                                                            style="color: grey;">(0)</span></label>
+
+                                            </ul>
+                                            <ul class="multi-column-dropdown" style="width: max-content;">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label for="star5" id="star">★<span
+                                                            style="color: grey;">(0)</span></label>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12" id="availability">
+
+                            <li class=" dropdown ">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Availability
+
+                                </a>
+                                <ul class="dropdown-menu multi-column columns-3">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <ul class="multi-column-dropdown">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" id="last" for="flexCheckDefault">
+                                                        In Stock
+                                                    </label>
+                                            </ul>
+                                            <ul class="multi-column-drpdown">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" id="last" for="flexCheckDefault">
+                                                        Out Of Stock
+                                                    </label>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cards section -->
+    <div class="container mt-5">
+        <p>showing all 7 reslut</p>
+        <div class="row">
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+                <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/11/A-Memoir-of-a-Life-Interrupted.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Safari Fountain Pen Gift Set
+                            </p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$35.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+                <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/11/Amazon-FBA-2022.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Safari Fountain Pen Gift Set
+                            </p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$35.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card " style=" border-radius:19px;overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/11/Berrybrook-Middle-School-Book.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Van Gogh Notebook</p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$24.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card " style=" border-radius:19px;   overflow: hidden;">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Tape-Dispenser-Large-4.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">
+                                2024 Wall Calendar</p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$12.00</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------Row 2------------------------------------------------------------------------------------->
+        <div class="row mt-5">
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+                <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/11/Graphic-Design-for-Beginners.jpg"
+                        class="card-img-top zoom" a lt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Safari Fountain Pen Gift Set
+                            </p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$35.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+                <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Pens-Journal-and-Refill-Bundle-3.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Safari Fountain Pen Gift Set
+                            </p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$35.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card " style=" border-radius:19px;overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/11/Programming-Fundamentals.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Van Gogh Notebook</p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$24.00</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="card " style=" border-radius:19px;overflow: hidden; ">
+                    <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Fountain-Pen-And-Journals-Gift-Set.jpg"
+                        class="card-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none; color: black;">
+                            <p class="card-title" style="text-align: center;">Van Gogh Notebook</p>
+                        </a>
+                        <p class="card-text" style="text-align: center;"><strong>$24.00</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- general information -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card" style="width: 18rem; border:none;">
+                    <i class="bi bi-truck"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
+                        fill="darkblue" class="bi bi-truck" style="margin: auto;" viewBox="0 0 16 9">
+                        <path
+                            d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                    </svg>
+                    <div class="card-body" style="text-align: center;;">
+
+                        <span class="card-title" style="text-align:center; font-size:x-large; font-weight: 500;">Free
+                            Shipping</span>
+
+                        <p class="card-text" style="text-align: center;color: grey; font-size:smaller;">
+                            <strong>Free
+                                shipping on all orders
+                                from
+                                $59</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card" style="width: 18rem;border:none;">
+                    <i class="bi bi-wallet"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
+                        fill="darkblue" class="bi bi-wallet" style="margin: auto;" viewBox="0 0 16 9">
+                        <path
+                            d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1" />
+                    </svg>
+                    <div class="card-body" style="text-align: center;;">
+
+                        <span class="card-title" style="text-align:center; font-size:x-large; font-weight: 500;">Safe
+                            Payment</span>
+
+                        <p class="card-text" style="text-align: center;color: grey;  font-size:smaller;">
+                            <strong>Free
+                                shipping on all orders
+                                from
+                                $59</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card" style="width: 18rem; border:none;">
+                    <i class="bi bi-truck"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
+                        fill="darkblue" class="bi bi-gift" style="margin: auto;" viewBox="0 0 16 9">
+                        <path
+                            d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z" />
+                    </svg>
+                    <div class="card-body" style="text-align: center;;">
+
+                        <span class="card-title"
+                            style="text-align:center; font-size:x-large; font-weight: 500;">Discount
+                            Coupans</span>
+
+                        <p class="card-text" style="text-align: center;color: grey; font-size:smaller;">
+                            <strong>Enjoy Huge
+                                Promotions</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card" style="width: 18rem;border: none;">
+                    <i class="bi bi-chat-left"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
+                        fill="darkblue" class="bi bi-truck" style="margin: auto;" viewBox="0 0 16 9">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                    </svg>
+                    <div class="card-body" style="text-align: center;;">
+
+                        <span class="card-title"
+                            style="text-align:center; font-size:x-large; font-weight: 500;">Quanlity
+                            Support</span>
+
+                        <p class="card-text" style="text-align: center;color: grey;  font-size:smaller;">
+                            <strong>24/7
+                                Support</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer  -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="logo"><img src="Logo.svg" alt=""></div>
+                    <!-- <p>We Promise We’ll Get Back To You Promptly. Your Gifting Needs Are Always On Our Minds!</p> -->
+                </div>
+                <div class="col-md-4">
+                    <p>Subscribe And Get 20% Off Your First Purchase</p>
+
+                </div>
+                <div class="col-md-4">
+                    <div class=" text-center">
+                        <form class="form-inline justify-content-center d-flex">
+
+                            <div class="form-group mb-2">
+
+                                <input type="email" class="form-control" id="subscribeEmail"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class=" col-lg-2 col-md-6 col-sm-6">
+                    <p><strong>Hotline:</strong> +1 515 323 6290</p>
+                    <p><strong>Monday – Friday:</strong> 9:00-20:00</p>
+                    <p><strong>Saturday:</strong> 11:00 – 15:00</p>
+                    <p><strong>Email:</strong> support@gmail.com</p>
+
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Store Reviews</a></li>
+                        <li><a href="#">Operation Status</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class=" col-lg-2  col-md-6 col-sm-6">
+                    <h5>Gift Cards</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Purchase Gift Card</a></li>
+                        <li><a href="#">Redeem Gift Card</a></li>
+                        <li><a href="#">Gift Card FAQs</a></li>
+                    </ul>
+                </div>
+                <div class=" col-lg-2 col-md-6 col-sm-6">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">TikTok</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class=" col-lg-2 col-md-6 col-sm-6">
+                    <h5>Custom Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Returns and complaints</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Pixel disclaimer</a></li>
+                        <li><a href="#">Competition Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- js cdn -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- slider price -->
+    <script>
+        let rangeMin = 100;
+        const range = document.querySelector(".range-selected");
+        const rangeInput = document.querySelectorAll(".range-input input");
+        const rangePrice = document.querySelectorAll(".range-price input");
+        /Next let’s add an eventListener for when the range inputs are toggled:/
+        rangeInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minRange = parseInt(rangeInput[0].value);
+                let maxRange = parseInt(rangeInput[1].value);
+                if (maxRange - minRange < rangeMin) {
+                    if (e.target.className === "min") {
+                        rangeInput[0].value = maxRange - rangeMin;
+                    } else {
+                        rangeInput[1].value = minRange + rangeMin;
+                    }
+                } else {
+                    rangePrice[0].value = minRange;
+                    rangePrice[1].value = maxRange;
+                    range.style.left = (minRange / rangeInput[0].max) * 100 + "%";
+                    range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
+        /    Once again we’ll be using an addEventListener function to detect any updates: /
+        rangePrice.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = rangePrice[0].value;
+                let maxPrice = rangePrice[1].value;
+                if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
+                    if (e.target.className === "min") {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+
+
+
+    </script>
+</body>
+
+</html>
