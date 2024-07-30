@@ -19,7 +19,7 @@
 
         .header-top .hotline {
             font-weight: bold;
-            padding-left: 8rem;
+            padding-left: 4rem;
             /* padding-top: 1rem; */
 
         }
@@ -260,6 +260,56 @@
         #last {
             position: absolute;
         }
+
+        @media (max-width:380px) {
+            #off {
+                display: none !important;
+            }
+
+            .hotline {
+                margin-left: 1rem;
+            }
+
+
+            .card-img-top4 {
+                max-width: 19rem;
+            }
+
+            #generali {
+                padding-left: 5rem;
+            }
+
+            #cardtop {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+        }
+
+        @media (max-width: 430px) {
+            #off {
+
+                display: none !important;
+            }
+
+        }
+
+        @media (max-width: 768px) {
+
+
+
+            .hotline {
+                margin-left: 2rem;
+            }
+
+            #generali {
+                padding-left: 7rem;
+            }
+
+            #select {
+                justify-content: flex-start;
+            }
+        }
     </style>
 </head>
 
@@ -269,14 +319,14 @@
     <section>
         <div class="header-top container-fluid">
             <div class="row  py-2" style="width: 100%;">
-                <div class="col-md-4 hotline">
+                <div class="col-md-4  hotline">
                     Hotline: +16468801999
                 </div>
-                <div class="col-md-4 mx-auto ">
+                <div class="col-md-4 mx-auto " id="off">
                     <b style="font-weight: 800; color: #0c10ff;">25%</b> OFF Multi-Use Print & Copy Paper with code
                     <strong style="font-weight: 800; color: #0c10ff;">EDUMA2024</strong>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2" id="select">
                     <div class=" right d-flex ">
                         <div class="dropdown">
                             <select style="background: transparent;">
@@ -291,7 +341,7 @@
                             </select>
                         </div>
                         <div id="Login">
-                            <a href="#">Login</a>
+                            <a href="#" style="color: #000000; text-decoration: none;">Login</a>
                         </div>
                     </div>
                 </div>
@@ -460,7 +510,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Categories
                             </a>
-                            <ul class="dropdown-menu multi-column columns-3" style="width: max-content;">
+                            <ul class="dropdown-menu multi-column columns-3" style="">
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <ul class="multi-column-dropdown">
@@ -557,7 +607,7 @@
                                     data-bs-toggle="dropdown" aria-expanded="false">Color
 
                                 </a>
-                                <ul class="dropdown-menu multi-column columns-3" style="width: max-content;">
+                                <ul class="dropdown-menu multi-column columns-3" style="width: 100%">
                                     <div class="row">
                                         <div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
@@ -731,10 +781,10 @@
     </section>
 
     <!-- cards section -->
-    <div class="container mt-5">
+    <div class="container mt-4">
         <p>showing all 7 reslut</p>
-        <div class="row">
-            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+        <div class="row ">
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12 mt-4" style="">
                 <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Colours-Pencils.jpg"
                         class="card-img-top zoom" alt="...">
@@ -747,7 +797,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12 mt-4" style="">
                 <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Cahier-Large-Notebook-Set.jpg"
                         class="card-img-top zoom" alt="...">
@@ -760,7 +810,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-4">
                 <div class="card " style=" border-radius:19px;overflow: hidden; ">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Fountain-Pen-And-Journals-Gift-Set.jpg"
                         class="card-img-top zoom" alt="...">
@@ -772,7 +822,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-4">
                 <div class="card " style=" border-radius:19px;   overflow: hidden;">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Tape-Dispenser-Large-4.jpg"
                         class="card-img-top zoom" alt="...">
@@ -787,8 +837,8 @@
             </div>
         </div>
         <!----------------------------------------Row 2------------------------------------------------------------------------------------->
-        <div class="row mt-5">
-            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+        <div class="row ">
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12 mt-4" style="">
                 <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/U-Brands-6ct-File-Folders-Precious-Petals.jpg"
                         class="card-img-top zoom" alt="...">
@@ -801,7 +851,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-lg-3 col-md-3 col-sm-6 col-12" style="">
+            <div class=" col-lg-3 col-md-3 col-sm-6 col-12 mt-4" style="">
                 <div class="card zbestselleroom" style=" border-radius: 19px;  overflow: hidden; ">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Van-Gogh-Collection-Cahier-Notebook-Set-Large.jpg"
                         class="card-img-top zoom" alt="...">
@@ -814,8 +864,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                <div class="card " style=" border-radius:19px;overflow: hidden; ">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 mt-4">
+                <div class="card " style=" border-radius:19px;overflow: hidden; height: 100%;">
                     <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Paulo-Wood-Writing-Desk-with-Drawer-Threshold%E2%84%A2.jpg"
                         class="card-img-top zoom" alt="...">
                     <div class="card-body">
@@ -830,10 +880,10 @@
     </div>
     </div>
     <!-- general information -->
-    <div class="container my-5">
+    <div class="container my-5" id="generali">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 18rem; border:none;">
+                <div class="card" style="width: 12rem; border:none;">
                     <i class="bi bi-truck"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-truck" style="margin: auto;" viewBox="0 0 16 9">
                         <path
@@ -854,7 +904,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 18rem;border:none;">
+                <div class="card" style="width: 12rem;border:none;">
                     <i class="bi bi-wallet"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-wallet" style="margin: auto;" viewBox="0 0 16 9">
                         <path
@@ -875,7 +925,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 18rem; border:none;">
+                <div class="card" style="width: 12rem; border:none;">
                     <i class="bi bi-truck"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-gift" style="margin: auto;" viewBox="0 0 16 9">
                         <path
@@ -895,7 +945,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 18rem;border: none;">
+                <div class="card" style="width: 12rem;border: none;">
                     <i class="bi bi-chat-left"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-truck" style="margin: auto;" viewBox="0 0 16 9">
                         <path
