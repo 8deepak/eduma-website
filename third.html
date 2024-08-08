@@ -57,7 +57,7 @@
 
         .right {
             gap: 7px;
-            justify-content: center;
+            justify-content: end;
         }
 
         /*icons  */
@@ -276,7 +276,7 @@
             }
 
             #generali {
-                padding-left: 5rem;
+                /* padding-left: 5rem; */
             }
 
             #cardtop {
@@ -284,6 +284,11 @@
                 margin-right: 0px;
             }
 
+            .right {
+
+                /* justify-content: end; */
+                margin-left: 1rem;
+            }
         }
 
         @media (max-width: 430px) {
@@ -292,18 +297,33 @@
                 display: none !important;
             }
 
+            .right {
+                width: 48%;
+                /* justify-content: end; */
+                margin-left: 1rem;
+            }
+
         }
 
         @media (max-width: 768px) {
+            #off {
+
+                display: none !important;
+            }
+
+            .right {
+                justify-content: normal;
 
 
+                /* margin-left: 21rem; */
+            }
 
             .hotline {
-                margin-left: 2rem;
+                /* margin-left: 2rem; */
             }
 
             #generali {
-                padding-left: 7rem;
+                /* padding-left: 7rem; */
             }
 
             #select {
@@ -326,7 +346,7 @@
                     <b style="font-weight: 800; color: #0c10ff;">25%</b> OFF Multi-Use Print & Copy Paper with code
                     <strong style="font-weight: 800; color: #0c10ff;">EDUMA2024</strong>
                 </div>
-                <div class="col-md-2" id="select">
+                <div class="col-md-4" id="select">
                     <div class=" right d-flex ">
                         <div class="dropdown">
                             <select style="background: transparent;">
@@ -349,7 +369,7 @@
         </div>
     </section>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light header-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="Logo.svg" alt="EDUMA ECOMMERCE" width="150">
@@ -510,7 +530,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Categories
                             </a>
-                            <ul class="dropdown-menu multi-column columns-3" style="">
+                            <ul class="dropdown-menu multi-column columns-3" style="position: relative;top: 0;">
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <ul class="multi-column-dropdown">
@@ -883,7 +903,7 @@
     <div class="container my-5" id="generali">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 12rem; border:none;">
+                <div class="card" style="border:none;">
                     <i class="bi bi-truck"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-truck" style="margin: auto;" viewBox="0 0 16 9">
                         <path
@@ -904,7 +924,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 12rem;border:none;">
+                <div class="card" style="border:none;">
                     <i class="bi bi-wallet"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-wallet" style="margin: auto;" viewBox="0 0 16 9">
                         <path
@@ -925,7 +945,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 12rem; border:none;">
+                <div class="card" style=" border:none;">
                     <i class="bi bi-truck"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-gift" style="margin: auto;" viewBox="0 0 16 9">
                         <path
@@ -945,7 +965,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card" style="width: 12rem;border: none;">
+                <div class="card" style="border: none;">
                     <i class="bi bi-chat-left"></i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="50"
                         fill="darkblue" class="bi bi-truck" style="margin: auto;" viewBox="0 0 16 9">
                         <path
