@@ -1,0 +1,74 @@
+@media(max-width:1024px){
+    /*----about----*/
+   
+    }  
+@media(max-width:991px){
+
+     /*----custom classes----*/
+     .text-center{
+        width: 100%;
+    }
+      /*----navbar brand----*/
+     .navigation-wrap .navbar-brand img{
+        height: 3.8123rem;
+     }
+     .navigation-wrap .nav-link{
+        line-height: 1.875rem  ;
+     }
+
+       /*----banner Design----*/
+       .top-banner{
+        padding: 9.375rem 0 9.375rem;
+       }
+       
+       .story-section{
+         width: 100%;
+         height: auto;
+
+        /*----carousel design----*/
+        
+}
+}
+
+@media(max-width:767px){
+     /*----custom css----*/
+
+
+     /*----top banner----*/
+
+     /*----story section----*/
+
+
+      /*----carousel design---*/
+      .testimonial-section .carousel-item .carousel-caption p{
+         padding:11rem 3.125;
+         
+      }
+
+
+       /*----newslettar----*/
+
+
+        /*----footer link----*/
+} 
+@media(max-width: 370px){
+.card.blog{
+   width: 190px;
+   margin-bottom: 27px;
+   display: none;
+   
+}
+ .btn-outline-primary{
+   margin-left:0px !important;
+ }
+ .see{
+   margin-left:0px;  
+ }
+ .carousel-client{
+
+ }
+ .popular{
+   padding-left:0px !important;
+ }
+
+}
