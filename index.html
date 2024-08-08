@@ -1072,6 +1072,7 @@
             }
         }
 
+
         .custom-nav {
             display: flex;
             justify-content: space-between;
@@ -1096,12 +1097,18 @@
                 display: none;
             }
 
+            .card-img-overlay {
+                top: -19px;
+            }
+
         }
 
         @media (max-width:552px) {
             .card-center {
                 padding-bottom: 30px !important;
             }
+
+
         }
 
         @media (min-width:991px) {
@@ -1129,11 +1136,17 @@
                 margin-left: 100px;
             }
 
+
+
         }
 
         @media (min-width:380px) {
             .heading {
                 margin-left: 80px;
+            }
+
+            .card-img-overlay {
+                top: -19px;
             }
 
         }
@@ -1735,7 +1748,7 @@
                         <div class="card text-light" style="border-radius: 20%;">
                             <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/09/Banner-1.png"
                                 class="card-img " alt="...">
-                            <div class="card-img-overlay" style="overflow:hidden;">
+                            <div class="card-img-overlay" style="overflow:hidden;top: -20px;">
                                 <h5 class="card-title m-1">FIRST ORDER</h5>
                                 <p class="card-text m-1"> ONLINE AND IN STORE</p>
                                 <h2>10% <small>off</small></h2>
@@ -1749,8 +1762,8 @@
                         <div class="card text-light" style="border-radius: 20%;">
                             <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/09/Banner-4.png"
                                 class="card-img" alt="...">
-                            <div class="card-img-overlay " style="overflow: hidden;">
-                                <h5 class="card-title m-1">FIRST ORDER</h5>
+                            <div class="card-img-overlay " style="overflow: hidden;top: -20px;">
+                                <h5 class="card-title m-1">SECOND ORDER</h5>
                                 <p class="card-text m-1"> ONLINE AND IN STORE</p>
                                 <h2>10% <small>off</small></h2>
                                 <p class="card-text m-2"><small>USE CODE: EDUMA</small></p>
@@ -1763,8 +1776,8 @@
                         <div class="card text-light" style="border-radius: 20%;">
                             <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/09/Banner-5.png"
                                 class="card-img" alt="...">
-                            <div class="card-img-overlay " style="overflow: hidden;">
-                                <h5 class="card-title m-1">FIRST ORDER</h5>
+                            <div class="card-img-overlay " style="overflow: hidden;top: -20px;">
+                                <h5 class="card-title m-1">THIRD ORDER</h5>
                                 <p class="card-text m-1"> ONLINE AND IN STORE</p>
                                 <h2>10% <small>off</small></h2>
                                 <p class="card-text m-2"><small>USE CODE: EDUMA</small></p>
@@ -2991,9 +3004,10 @@
         </div>
     </div>
     <div class="cardes" style="margin-bottom: 50px;">
-        <div class="row m-3 p-3 text-center " style="gap: 2rem;">
+        <div class="row m-3 p-3 text-center " style="gap: 2rem;display: flex;
+    justify-content: center;">
 
-            <div class="carde col-lg-4 col-md-4 "
+            <div class="carde col-lg-4 col-md-4 col-sm-4" id="schoolsolution"
                 style="border-radius: 2em;  max-width: 27rem; margin-left: rem;  border: solid 1px blue">
                 <div class="icon-crade">
                     <i class="bi bi-pencil-fill"></i>
