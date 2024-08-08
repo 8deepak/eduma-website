@@ -144,7 +144,9 @@ background-color: rgb(224, 197, 148);
  
 }
 .zoom:hover{
-  transform: scale 2s cubic-bezier(.25,.46,.45,.94);;
+  transform: scale 2s cubic-bezier(.25,.46,.45,.94);
+  overflow: hidden;
+
 }
 
 
