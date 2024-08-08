@@ -281,7 +281,41 @@
             transform: scale(1.1);
         }
 
+        #lrm {
+            width: 0;
+        }
+
         @media (max-width:380px) {
+            #off {
+                display: none !important;
+            }
+
+            .hotline {
+                margin-left: 1rem;
+            }
+
+
+            .card-img-top4 {
+                max-width: 19rem;
+            }
+
+            #generali {
+                /* padding-left: 5rem; */
+            }
+
+            #cardtop {
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .right {
+
+                /* justify-content: end; */
+                margin-left: 1rem;
+            }
+        }
+
+        @media (max-width:480px) {
             #off {
                 display: none !important;
             }
@@ -298,30 +332,39 @@
                 margin-left: 0px;
                 margin-right: 0px;
             }
+
+            .right {
+                justify-content: flex-start;
+            }
         }
 
         @media (max-width: 768px) {
             .hotline {}
 
-            #off {
-                display: none !important;
-            }
 
-            #lrm {
-                max-width: 26em;
+            #generali {
+                padding-left: 6rem;
             }
 
             .card-img-top4 {
                 max-width: 22rem;
             }
 
-            #generali {
-                padding-left: 6rem;
+            .header-top .hotline {
+                padding-left: 1rem;
             }
 
-            #cardImg {
-                padding-right: 0px;
+            .right {
+                justify-content: end;
             }
+
+            #off {
+                display: none !important;
+            }
+
+
+
+
         }
 
         @media (max-width:1199px) {
@@ -370,7 +413,7 @@
         </div>
     </section>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light header-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="Logo.svg" alt="EDUMA ECOMMERCE" width="150">
@@ -743,7 +786,7 @@
                 <div class="card row " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px; padding-right: 0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/2024-Appointment-Notebook.jpg"
                             class="card-img-top4" alt="...">
                     </div>
@@ -790,7 +833,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px;padding-right: 0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/2024-Wall-Calendar-Greetings-From-Around-The-World.jpg"
                             class="card-img-top4" alt="...">
                     </div>
@@ -837,7 +880,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px;padding-right: 0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/6-Pocket-File-A4.jpg"
                             class="card-img-top4" alt="...">
                     </div>
@@ -884,7 +927,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px;padding-right: 0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Book-Band-Pen-Case.png"
                             class="card-img-top4" alt="...">
                     </div>
@@ -931,7 +974,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px;padding-right: 0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Costway-48-Computer-Desk-Study-Workstation-Laptop-Table-Home-Office-5.jpg"
                             class="card-img-top4" alt="...">
                     </div>
@@ -978,7 +1021,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px; padding-right: 0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Handmade-Mini-Stone-Crayon-Set-Coloured.jpg"
                             class="card-img-top4" alt="...">
                     </div>
@@ -1025,7 +1068,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px; padding-right: 0px;  overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Weekly-Undated-Planner-Set-B6-2.jpg"
                             class="card-img-top4" alt="...">
                     </div>
@@ -1072,7 +1115,7 @@
                 <div class="card row mt-3 " id="cardtop"
                     style=" display: flex; flex-direction: row; border-radius: 20px; overflow: hidden;margin-right: 0px; margin-left: 0px;">
                     <div class="col-lg-4 col-md-4" id="cardImg"
-                        style="padding-left:0px; overflow: hidden; text-align: center; display: flex;justify-content: center;">
+                        style="padding-left:0px; padding-right: 0; overflow: hidden; text-align: center; display: flex;justify-content: center;">
                         <img src="https://eduma.thimpress.com/demo-ecommerce/wp-content/uploads/sites/100/2023/10/Paulo-Wood-Writing-Desk-with-Drawer-Threshold%E2%84%A2.jpg"
                             class="card-img-top4" alt="...">
                     </div>
